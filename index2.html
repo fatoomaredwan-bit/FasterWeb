@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FASTER — Enhanced Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS for animations on scroll -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #0069ff;
+      --text-color: #333;
+      --light-gray: #f8f9fa;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height: 1.5;
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+    nav.navbar {
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    nav.navbar.scrolled {
+      background-color: white !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .hero {
+      background: linear-gradient(90deg, rgba(0,105,255,0.08), rgba(0,0,0,0.02));
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 48px;
+    }
+    .lead-sub {
+      color: #6c757d;
+    }
+    .service-card {
+      border: 0;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+    .pricing .card {
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .pricing .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .team .card {
+      border: 0;
+      transition: transform 0.3s;
+    }
+    .team .card:hover {
+      transform: scale(1.05);
+    }
+    footer.footer {
+      background: var(--light-gray);
+      padding: 40px 0;
+    }
+    @media (max-width:576px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">FASTER</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown">Drop Down</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Drop Down 1</a></li>
+            <li class="dropdown-submenu dropend">
+              <a class="dropdown-item dropdown-toggle" href="#">Deep Drop Down</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Deep Drop Down 1</a></li>
+                <li><a class="dropdown-item" href="#">Deep Drop Down 2</a></li>
+                <li><a class="dropdown-item" href="#">Deep Drop Down 3</a></li>
+                <li><a class="dropdown-item" href="#">Deep Drop Down 4</a></li>
+                <li><a class="dropdown-item" href="#">Deep Drop Down 5</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item" href="#">Drop Down 2</a></li>
+            <li><a class="dropdown-item" href="#">Drop Down 3</a></li>
+            <li><a class="dropdown-item" href="#">Drop Down 4</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+        <li class="nav-item"><a class="btn btn-primary ms-2" href="#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
+        <h1>Your Lightning Fast Delivery Partner</h1>
+        <p class="lead lead-sub">Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt optio quis sit odio nemo quisquam. eius quos reiciendis eum vel eum voluptatem eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit</p>
+        <div class="d-flex gap-2 mt-4">
+          <input class="form-control me-2" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary">Search</button>
+        </div>
+        <div class="mt-4 d-flex gap-3">
+          <div class="text-center">
+            <h4 class="mb-0" data-aos="fade-up" data-aos-delay="400">Clients</h4>
+          </div>
+          <div class="text-center">
+            <h4 class="mb-0" data-aos="fade-up" data-aos-delay="500">Projects</h4>
+          </div>
+          <div class="text-center">
+            <h4 class="mb-0" data-aos="fade-up" data-aos-delay="600">Support</h4>
+          </div>
+          <div class="text-center">
+            <h4 class="mb-0" data-aos="fade-up" data-aos-delay="700">Workers</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" class="img-fluid rounded" alt="Hero Image">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h3>About Us</h3>
+    <p>Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores.</p>
+
+    <div class="row gy-4 mt-4">
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card p-3 service-card">
+          <h5>Lorem Ipsum</h5>
+          <p class="mb-0">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          <a href="#" class="mt-2 d-inline-block">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up" data-aos-delay="400">
+        <div class="card p-3 service-card">
+          <h5>Dolor Sitema</h5>
+          <p class="mb-0">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" class="mt-2 d-inline-block">Learn More →</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="600">
+        <div class="card p-3 service-card">
+          <h5>Sed ut perspiciatis</h5>
+          <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          <a href="#" class="mt-2 d-inline-block">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <h3>Our Services</h3>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card h-100 p-3 service-card">
+          <img src="https://images.unsplash.com/photo-1542228262-2b4d9b6f3d5f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" class="card-img-top rounded" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Storage</h5>
+            <p class="card-text">Cumque eos in qui numquam. Aut aspernatur perferendis sed atque quia voluptas quisquam repellendus temporibus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card h-100 p-3 service-card">
+          <img src="https://images.unsplash.com/photo-1509460913899-8b2f3c3d8b9f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" class="card-img-top rounded" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Logistics</h5>
+            <p class="card-text">Asperiores provident dolor accusamus pariatur dolore nam id audantium ut et iure incidunt molestiae dolor ipsam.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="600">
+        <div class="card h-100 p-3 service-card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" class="card-img-top rounded" alt="">
+          <div class="card-body">
+            <h5 class="card-title">Cargo</h5>
+            <p class="card-text">Dicta quam similique quia architecto eos nisi aut ratione aut ipsum reiciendis sit doloremque oluptatem aut et molestiae.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h3>Pricing</h3>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Free Plan</h5>
+            <h6 class="card-subtitle mb-2">$0 / month</h6>
+            <ul class="list-unstyled">
+              <li>Quam adipiscing vitae proin</li>
+              <li>Nec feugiat nisl pretium</li>
+              <li>Nulla at volutpat diam</li>
+            </ul>
+            <button class="btn btn-outline-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up" data-aos-delay="400">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Business Plan</h5>
+            <h6 class="card-subtitle mb-2">$29 / month</h6>
+            <ul class="list-unstyled">
+              <li>Quam adipiscing vitae proin</li>
+              <li>Nec feugiat nisl pretium</li>
+              <li>Nulla at volutpat diam</li>
+            </ul>
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right" data-aos-delay="600">
+        <div class="card text-center p-3">
+          <div class="card-body">
+            <h5 class="card-title">Developer Plan</h5>
+            <h6 class="card-subtitle mb-2">$49 / month</h6>
+            <ul class="list-unstyled">
+              <li>Quam adipiscing vitae proin</li>
+              <li>Nec feugiat nisl pretium</li>
+              <li>Nulla at volutpat diam</li>
+            </ul>
+            <button class="btn btn-outline-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <h3>Team</h3>
+    <div class="row gy-4 mt-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-3" width="90" alt="">
+          <h6>Saul Goodman</h6>
+          <small class="text-muted">CEO & Founder</small>
+          <p class="mt-2 small">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.</p>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle mb-3" width="90" alt="">
+          <h6>Sara Wilsson</h6>
+          <small class="text-muted">Designer</small>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+        <div class="card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3" width="90" alt="">
+          <h6>Jena Karlis</h6>
+          <small class="text-muted">Store Owner</small>
+        </div>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
+        <div class="card text-center p-3">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle mb-3" width="90" alt="">
+          <h6>Matt Brandon</h6>
+          <small class="text-muted">Freelancer</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" id="faq">
+  <div class="container" data-aos="fade-up">
+    <h3>Frequently Asked Questions</h3>
+    <div class="accordion mt-3" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">Non consectetur a erat nam at lectus urna duis?</button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="q3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <h5>FASTER</h5>
+        <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies.</p>
+      </div>
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="400">
+        <h6>Useful Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+        <h6>Contact Us</h6>
+        <p>A108 Adam Street<br>New York, NY 535022<br>Phone: +1 5589 55488 55</p>
+      </div>
+      <div class="col-md-3 text-end" data-aos="fade-up" data-aos-delay="800">
+        <small>© Copyright FASTER. All Rights Reserved</small><br>
+        <small>Designed by FASTER</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+  // Change navbar style on scroll
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav.navbar');
+    if(window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
